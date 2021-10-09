@@ -52,6 +52,7 @@ namespace ACE
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
             });
+            
 
             app.UseSpa(spa =>
             {
