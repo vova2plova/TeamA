@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import '../LogInForm.css';
 import './NavMenu.css';
 
 export class NavMenu extends Component {
@@ -30,17 +31,18 @@ export class NavMenu extends Component {
             <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
             <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
               <ul className="navbar-nav flex-grow">
+                <form className="form-inline my-2 my-lg-0">
+                  <input type="search" placeholder="Search" aria-label="Search"/>
+                    <button className = "btn btn-outline-primary" type="submit">Search</button>
+                </form>
                 <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/login">Sign In</NavLink>
+                  <NavLink tag={Link} className="text-dark" to="/SignIn">Sign In</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink tag={Link} className="text-dark" to="/SignUp">Sign Up</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/counter">Counter</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/fetch-data">Fetch data</NavLink>
                 </NavItem>
               </ul>
             </Collapse>
