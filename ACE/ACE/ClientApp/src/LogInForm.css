@@ -56,6 +56,20 @@ h2 {
     text-align: center;
 }
 
+#formHome {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    padding: 30px;
+    width: 90%;
+    max-width: 900px;
+    position: relative;
+    padding: 0px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: left;
+}
+
 #formFooter {
     background-color: #f6f6f6;
     border-top: 1px solid #dce8f1;
@@ -69,6 +83,17 @@ h2 {
 
 /* TABS */
 
+h2.inactiveHome {
+    color: #999999;
+    font-size: 18px;
+}
+
+h2.activeHome {
+    color: #0d0d0d;
+    border-bottom: 2px solid #5fbae9;
+    font-size: 24px;
+}
+
 h2.inactive {
     color: #cccccc;
 }
@@ -77,7 +102,6 @@ h2.active {
     color: #0d0d0d;
     border-bottom: 2px solid #5fbae9;
 }
-
 
 
 /* FORM TYPOGRAPHY*/
@@ -145,8 +169,6 @@ input[type=text]:focus {
 input[type=text]:placeholder {
     color: #cccccc;
 }
-
-
 
 /* ANIMATIONS */
 
