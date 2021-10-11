@@ -307,6 +307,36 @@ input[type=text]::placeholder {
     background: transparent;
 }
 
+.dropDownContent{
+    text-decoration: none;
+    display: inline-block;
+    width: 70px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 10px;
+    margin: 10px 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #524f4e;
+    background: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+    transition: .3s;
+}
+.dropDownContent {
+    background: #56baed;
+    //box-shadow: 0 15px 20px rgba(46, 159, 229, 0.4);
+    color: white;
+    transform: translateY(-7px);
+}
+
+#show{
+    display: none;
+}
+
 .dropDownBar:after{
     content: "";
     margin:0 0.5em;
@@ -325,10 +355,6 @@ input[type=text]::placeholder {
 
 #icon {
     width:30%;
-}
-
-#smallIcon{
-    width:20%;
 }
 
 * {

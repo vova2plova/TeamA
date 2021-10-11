@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-
 export class Home extends Component {
   static displayName = Home.name;
+
 
   render () {
     return (
@@ -17,11 +17,12 @@ export class Home extends Component {
           </form>
           </div>
           <div id="formHome">
-              <button className="dropDownBar">
+              <button className="dropDownBar" >
                   Все подряд
               </button>
               <div>
-                  
+                  <a id = "show" href = "#" className="dropDownContent">Лучшие </a>
+                  <a id = "show" href = "#" className="dropDownContent">Новые </a>
               </div>
           </div>
           
