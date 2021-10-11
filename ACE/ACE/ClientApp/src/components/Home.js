@@ -7,15 +7,24 @@ export class Home extends Component {
   render () {
     return (
       <div>
+          <div id = "formHome">
+          <h1> Все потоки</h1>
           <form>
             <h2 className="activeHome">Обо всем</h2>
-            <h2 className="inactiveHome underlineHover">Программирование</h2>
-            <h2 className="inactiveHome underlineHover Tittle">Дизайн</h2>
-            <h2 className="inactiveHome underlineHover Tittle">Маркетинг</h2>
+            <h2 className="inactiveHome underline">Программирование</h2>
+            <h2 className="inactiveHome underline">Дизайн</h2>
+            <h2 className="inactiveHome underline">Маркетинг</h2>
           </form>
-          <div id="formHome">
-            <h1 className="text-dark">faf</h1>
           </div>
+          <div id="formHome">
+              <button className="dropDownBar">
+                  Все подряд
+              </button>
+              <div>
+                  
+              </div>
+          </div>
+          
       </div>
         
     );

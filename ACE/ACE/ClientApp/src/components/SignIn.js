@@ -1,4 +1,5 @@
 ﻿import React, { Component } from 'react';
+import '../LogInForm.css'
 
 export class SignIn extends Component {
     static displayName = SignIn.name;

@@ -64,8 +64,8 @@ h2 {
     width: 90%;
     max-width: 900px;
     position: relative;
-    padding: 0px;
-    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    padding: 15px;
+    -webkit-box-shadow: 0 15px 30px 0 rgba(0,0,0,0.3);
     box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
     text-align: left;
 }
@@ -166,9 +166,11 @@ input[type=text]:focus {
     border-bottom: 2px solid #5fbae9;
 }
 
-input[type=text]:placeholder {
+input[type=text]::placeholder {
     color: #cccccc;
 }
+
+
 
 /* ANIMATIONS */
 
@@ -272,7 +274,48 @@ input[type=text]:placeholder {
     width: 100%;
 }
 
+.underline:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    font-size: 16px;
+    background-color: #56baed;
+    content: "";
+    transition: width 0.2s;
+}
 
+.underline:hover {
+    color: #0d0d0d;
+    font-size: 24px;
+
+}
+
+.underline:hover:after{
+    width: 100%;
+}
+
+.dropDownBar{
+    position: relative;
+    border: white;
+    text-align: left;
+    font-size: 16px;
+    color: #000000;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: transparent;
+}
+
+.dropDownBar:after{
+    content: "";
+    margin:0 0.5em;
+    font-family: "Poppins", sans-serif;
+    display:inline-block;
+    border: 7px solid transparent;
+    border-top:8px solid gray;
+    border-bottom:0 none;
+}
 
 /* OTHERS */
 
@@ -282,6 +325,10 @@ input[type=text]:placeholder {
 
 #icon {
     width:30%;
+}
+
+#smallIcon{
+    width:20%;
 }
 
 * {
