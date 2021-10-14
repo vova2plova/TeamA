@@ -1,0 +1,59 @@
+﻿.underline:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    font-size: 16px;
+    background-color: #56baed;
+    content: "";
+    transition: width 0.2s;
+}
+
+.underline:hover {
+    color: #0d0d0d;
+    font-size: 24px;
+
+}
+
+.underline:hover:after{
+    width: 100%;
+}
+
+#formHome {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    width: 90%;
+    max-width: 900px;
+    position: relative;
+    padding: 15px;
+    -webkit-box-shadow: 0 15px 30px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: left;
+}
+
+#post {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    width: 90%;
+    max-width: 900px;
+    position: relative;
+    padding: 15px;
+    margin-top: 5px;
+    -webkit-box-shadow: 0 15px 30px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: left;
+}
+
+.tittle{
+    color: #206c91;
+    text-transform: uppercase;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+.postBody{
+    
+}

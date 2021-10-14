@@ -1,4 +1,6 @@
 ﻿import React, { Component } from 'react';
+import {Link} from "react-router-dom";
+import {NavLink} from "reactstrap";
 
 export class SignUp extends Component {
     static displayName = SignUp.name;
@@ -10,7 +12,7 @@ export class SignUp extends Component {
                 <div id="formContent">
 
                     <h2>
-                        <a className="inactive underlineHover"  href = "https://localhost:5001/SignIn">Sign In</a> 
+                        <NavLink tag={Link} className="inactive underlineHover" to="/signIn">Sign In</NavLink> 
                     </h2>
 
                     <h2 className="active">Sign Up </h2>

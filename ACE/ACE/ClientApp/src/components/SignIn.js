@@ -1,5 +1,6 @@
 ﻿import React, { Component } from 'react';
-import '../LogInForm.css'
+import {NavLink} from "reactstrap";
+import { Link } from 'react-router-dom';
 
 export class SignIn extends Component {
     static displayName = SignIn.name;
@@ -13,7 +14,7 @@ export class SignIn extends Component {
             <h2 className="active"> Sign In </h2>
             
             <h2>
-                <a className="inactive underlineHover" href = "https://localhost:5001/SignUp">Sign Up</a> 
+                <NavLink tag={Link} className="inactive underlineHover" to="/signUp">Sign Up</NavLink>
             </h2>
 
             <div className="fadeIn first">

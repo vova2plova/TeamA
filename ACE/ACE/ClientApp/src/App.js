@@ -8,8 +8,9 @@ import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
 
 
-import './custom.css'
-import './LogInForm.css'
+import './Styles/custom.css'
+import './Styles/sign.css'
+import './Styles/home.css'
 
 
 export default class App extends Component {

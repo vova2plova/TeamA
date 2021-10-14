@@ -1,8 +1,17 @@
-import React, { Component } from 'react';
+import React, {Component, useState} from 'react';
+import '../Styles/dropDown.css'
 
 export class Home extends Component {
   static displayName = Home.name;
 
+
+    dropDown(){
+      if (document.getElementById('show').style.display === 'none') {
+          document.getElementById('show').style.display = 'block'
+      }else{
+          document.getElementById('show').style.display = 'none'
+      }
+  }
 
   render () {
     return (
@@ -16,14 +25,21 @@ export class Home extends Component {
             <h2 className="inactiveHome underline">Маркетинг</h2>
           </form>
           </div>
+          <dropDown>
+              
+          </dropDown>
           <div id="formHome">
-              <button className="dropDownBar" >
+              <button className="dropDownBar" onClick= {this.dropDown}>
                   Все подряд
               </button>
-              <div>
-                  <a id = "show" href = "#" className="dropDownContent">Лучшие </a>
-                  <a id = "show" href = "#" className="dropDownContent">Новые </a>
+              <div id = "show">
+                  <a href = "#" className="dropDownContent">Лучшие </a>
+                  <a href = "#" className="dropDownContent">Новые </a>
               </div>
+          </div>
+          <div id ="post">
+              <h1 className="tittle">Заголовок</h1>
+              
           </div>
           
       </div>
