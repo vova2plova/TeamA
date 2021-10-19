@@ -7,9 +7,9 @@ render() {
     return(
         <div id = "post">
             <span>
-                <img className="iconHolder" src = "https://cdn-icons.flaticon.com/png/512/506/premium/506134.png?token=exp=1634651712~hmac=f2a2ce05638210e4210de284dee8e71a" alt = "User Icon"/>
+                <img className="iconHolder" src = "https://catherineasquithgallery.com/uploads/posts/2021-03/1614560341_16-p-ikonki-na-belom-fone-18.png" alt = "User Icon"/>
                 vova2plova
-                <span> сегоgдня в 17:33</span>
+                <span> сегодя в 17:33</span>
             </span>
             <h1 className="tittle">Разработка B2B-оптового магазина лекарственных средств и правильное встраивание в экосистему заказчика</h1>
             <div className="description">
