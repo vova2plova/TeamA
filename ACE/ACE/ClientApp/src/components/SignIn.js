@@ -11,10 +11,10 @@ export class SignIn extends Component {
         <div className="wrapper fadeInDown">
         <div id="formContent">
 
-            <h2 className="active"> Sign In </h2>
+            <h2 className="active">вход</h2>
             
             <h2>
-                <NavLink tag={Link} className="inactive underlineHover" to="/signUp">Sign Up</NavLink>
+                <NavLink tag={Link} className="inactive underlineHover" to="/signUp">регистрация</NavLink>
             </h2>
 
             <div className="fadeIn first">
@@ -28,7 +28,7 @@ export class SignIn extends Component {
             </form>
 
             <div id="formFooter">
-                <a className="underlineHover" href="#">Forgot Password?</a>
+                <a className="underlineHover" href="#">Забыли пороль?</a>
             </div>
 
         </div>
