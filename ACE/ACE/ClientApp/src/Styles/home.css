@@ -59,6 +59,7 @@
 
 .description{
     font-size: 1em;
+    display: block;
 }
 
 .imgHolder{
@@ -67,4 +68,10 @@
     position: relative;
     padding-bottom: 1em;
     width: 100%;
+}
+
+.iconHolder{
+    max-width: 1.5em;
+    max-height: 1.5em;
+    display: inline-block;
 }
