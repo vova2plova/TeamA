@@ -1,5 +1,7 @@
 import React, {Component, useState} from 'react';
+import PostItem from "./PostItem";
 import '../Styles/dropDown.css'
+import {Button} from "reactstrap";
 
 export class Home extends Component {
   static displayName = Home.name;
@@ -12,6 +14,8 @@ export class Home extends Component {
           document.getElementById('show').style.display = 'none'
       }
   }
+  
+    
 
   render () {
     return (
@@ -37,10 +41,11 @@ export class Home extends Component {
                   <a href = "#" className="dropDownContent">Новые </a>
               </div>
           </div>
-          <div id ="post">
-              <h1 className="tittle">Заголовок</h1>
-              
-          </div>
+          <PostItem/>
+          <PostItem/>
+          <PostItem/>
+          <PostItem/>
+          <PostItem/>
           
       </div>
         

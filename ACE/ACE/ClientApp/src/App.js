@@ -11,6 +11,7 @@ import { Counter } from './components/Counter';
 import './Styles/custom.css'
 import './Styles/sign.css'
 import './Styles/home.css'
+import './Styles/post.css'
 
 
 export default class App extends Component {
