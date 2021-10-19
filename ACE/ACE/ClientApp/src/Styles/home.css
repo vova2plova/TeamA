@@ -72,6 +72,25 @@
 
 .iconHolder{
     max-width: 1.5em;
+    padding-bottom: 0.1em;
     max-height: 1.5em;
     display: inline-block;
+}
+
+.Continue{
+    /*margin-top: 0.5em;*/
+    display: block;
+    /*border-radius: 0.5em;*/
+    /*width: 10em;*/
+    /*border-color: black;*/
+    /*height: 45px;*/
+    /*line-height: 45px;*/
+    /*font-family: 'Poppins', sans-serif;*/
+    /*font-size: 1em;*/
+    /*text-transform: uppercase;*/
+    /*text-align: center;*/
+    letter-spacing: 3px;
+    /*color: #524f4e;*/
+    background: #ffffff;
+    /*box-shadow: 0 8px 15px rgba(0, 0, 0, .1);*/
 }

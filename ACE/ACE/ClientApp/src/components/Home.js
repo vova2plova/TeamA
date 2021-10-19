@@ -8,10 +8,10 @@ export class Home extends Component {
 
 
     dropDown(){
-      if (document.getElementById('show').style.display === 'none') {
-          document.getElementById('show').style.display = 'block'
-      }else{
+      if (document.getElementById('show').style.display === 'block') {
           document.getElementById('show').style.display = 'none'
+      }else{
+          document.getElementById('show').style.display = 'block'
       }
   }
   
