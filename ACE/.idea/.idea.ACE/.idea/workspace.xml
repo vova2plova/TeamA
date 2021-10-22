@@ -14,13 +14,21 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/156e3d5f725c4bcd88dda70ddda36126f390/4/SpaApplicationBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
@@ -98,7 +106,8 @@
       <workItem from="1634166211028" duration="5372000" />
       <workItem from="1634248872386" duration="5211000" />
       <workItem from="1634323779935" duration="5274000" />
-      <workItem from="1634649260888" duration="6181000" />
+      <workItem from="1634649260888" duration="8359000" />
+      <workItem from="1634831387043" duration="17828000" />
     </task>
     <servers />
   </component>

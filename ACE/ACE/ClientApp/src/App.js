@@ -3,9 +3,10 @@ import { Route } from 'react-router';
 import { Layout } from './components/Layout';
 import { Home } from './components/Home';
 import { SignIn } from './components/SignIn';
-import { SignUp } from "./components/SignUp";
+import { SignUp } from './components/SignUp';
 import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
+import { PostPage} from './components/PostPage';
 
 
 import './Styles/custom.css'
@@ -25,6 +26,7 @@ export default class App extends Component {
         <Route path='/SignUp' component={SignUp} />
         <Route path='/counter' component={Counter} />
         <Route path='/fetch-data' component={FetchData} />
+        <Route path='/PostPage' component={PostPage} />
       </Layout>
     );
   }

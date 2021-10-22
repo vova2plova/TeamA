@@ -1,7 +1,7 @@
-import React, {Component, useState} from 'react';
+import React, {Component} from 'react';
 import PostItem from "./PostItem";
+
 import '../Styles/dropDown.css'
-import {Button} from "reactstrap";
 
 export class Home extends Component {
   static displayName = Home.name;

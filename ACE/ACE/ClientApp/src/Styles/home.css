@@ -71,9 +71,9 @@
 }
 
 .iconHolder{
-    max-width: 1.5em;
+    width: 24px;
     padding-bottom: 0.1em;
-    max-height: 1.5em;
+    height: 24px;
     padding-right: 0.3em;
     display: inline-block;
 }

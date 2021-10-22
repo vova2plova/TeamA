@@ -1,4 +1,6 @@
 ﻿import React, {Component} from 'react';
+import {NavLink} from "reactstrap";
+import { Link } from 'react-router-dom';
 
 export class PostItem extends Component {
     static displayName = PostItem.name;
@@ -11,11 +13,11 @@ render() {
                 vova2plova
                 <span> сегодя в 17:33</span>
             </span>
-            <h1 className="tittle">Разработка B2B-оптового магазина лекарственных средств и правильное встраивание в экосистему заказчика</h1>
+            <h1 className="tittle">Создание и использование динамических библиотек в Rust</h1>
             <div className="description">
-            <img className="imgHolder" src = "https://hsto.org/getpro/habr/upload_files/d14/f61/d6d/d14f61d6da9a3a04538e36615670b6c2.png" alt = "Photo"/>
-                B2B-оптовые магазины — отдельный устоявшийся вид веб-проектов, но очень неоднородный. Каждый такой сайт уникален и требует индивидуального подхода. Эта статья — о разработанной нами B2B-площадке для оптовых заказов лекарственных средств для крупной фармацевтической компании.
-            <a href = "#" className="Continue">Читать далее</a>
+            <img className="imgHolder" src = "https://hsto.org/getpro/habr/upload_files/8e8/da9/499/8e8da94991532ebd9a665ae52f71cd6c.jpg" alt = "Photo"/>
+                Динамические библиотеки подключаются к программе во время выполнения. Это позволяет обновлять их реализацию и компилировать независимо от использующих программ. Такой подход открывает ряд дополнительных возможностей при разработке ПО. Например, написание разных модулей приложения на разных языках. Или создание системы динамически подключаемых плагинов. В данной статье мы рассмотрим, как создавать и загружать динамические библиотеки в Rust.
+            <NavLink tag={Link} className="Continue" to = "./PostPage">Читать далее</NavLink>
             </div>
         </div>
     );
