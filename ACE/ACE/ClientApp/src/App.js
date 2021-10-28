@@ -8,7 +8,6 @@ import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
 import { PostPage} from './components/PostPage';
 
-
 import './Styles/custom.css'
 import './Styles/sign.css'
 import './Styles/home.css'

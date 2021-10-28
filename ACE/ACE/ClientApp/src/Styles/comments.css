@@ -48,6 +48,7 @@
 }
 
 .inputCommentPlace{
+    display: inline-block;
     font-family: "Poppins", sans-serif;
     -webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;

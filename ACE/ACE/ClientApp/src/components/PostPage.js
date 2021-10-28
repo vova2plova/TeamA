@@ -1,9 +1,34 @@
 ﻿import React, {Component} from 'react';
 import Comments from "./Comments";
-
+import InputComments from "../UI/InputComments";
 export class PostPage extends Component {
     static displayName = PostPage.name;
-
+    
+    constructor(props) {
+        super(props);
+        this.state = {
+            post : 
+                [
+                    { nickname : "wicheril", comment : "Уф у чуваша трусы большие", date : Date.now().toString(), img : null }, 
+                    { nickname : "libermgm", comment : "Согласен", date : Date.now().toString(), img : null }
+                ]
+        }
+    }
+    
+    postComment = () =>{
+        let contentEditable = document.querySelector('[contenteditable]');
+        const newComment = {
+            nickname : "standart",
+            comment : contentEditable.textContent,
+            date : Date.now().toString(),
+            img : null
+        }
+        contentEditable.textContent = ""
+        this.state.post.push(newComment)
+        this.setState(this.state);
+        console.log(this.state)
+    }
+    
     render() {
         return (
             <div>
@@ -16,7 +41,7 @@ export class PostPage extends Component {
                                 <a className="author" href="#">vova2plova</a>
                             </div>
                             <div className = "subButtonPlace">
-                                <button className="subButton">Подписаться </button>
+                                <button type = "submit" className="subButton">Подписаться </button>
                             </div>
                         </div>
                         <div id = "postContent">
@@ -26,7 +51,16 @@ export class PostPage extends Component {
                             Создание динамической библиотеки
                             Для создания динамической библиотеки c C ABI нужно, для начала, указать компилятору, что мы хотим в качестве выходного продукта иметь именно её. Для этого в файл Cargo.toml добавим следующее:
                         </div>
-                        <Comments/>
+                        <div className="inputCommentPlace">
+                            <div>Написать комментарий</div>
+                            <InputComments/>
+                            <button className="subButton" onClick={this.postComment}>Отправить</button>
+                        </div>
+                        <div>
+                            {this.state.post.map((post) => 
+                                <Comments post={post} key={post.index}/>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
