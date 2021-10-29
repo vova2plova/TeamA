@@ -9,8 +9,8 @@ export class PostPage extends Component {
         this.state = {
             post : 
                 [
-                    { nickname : "wicheril", comment : "Уф у чуваша трусы большие", date : Date.now().toString(), img : null }, 
-                    { nickname : "libermgm", comment : "Согласен", date : Date.now().toString(), img : null }
+                    { nickname : "wicheril", comment : "Уф у чуваша трусы большие", date : Date().toString(), img : null }, 
+                    { nickname : "libermgm", comment : "Согласен", date : Date().toString(), img : null }
                 ]
         }
     }
@@ -20,7 +20,7 @@ export class PostPage extends Component {
         const newComment = {
             nickname : "standart",
             comment : contentEditable.textContent,
-            date : Date.now().toString(),
+            date : Date().toString(),
             img : null
         }
         contentEditable.textContent = ""

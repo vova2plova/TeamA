@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1637538b-1fe3-427e-8125-e021b3644f29" name="Changes" comment="" />
+    <list default="true" id="1637538b-1fe3-427e-8125-e021b3644f29" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ACE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ACE/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACE/ClientApp/src/components/PostPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/ACE/ClientApp/src/components/PostPage.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,11 +34,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/156e3d5f725c4bcd88dda70ddda36126f390/4/SpaApplicationBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f42dbe2a797844e7ad8344707502b4c15b978/20/DeveloperExceptionPageExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ACE/ClientApp/package-lock.json" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/156e3d5f725c4bcd88dda70ddda36126f390/10/ReactDevelopmentServerMiddlewareExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/156e3d5f725c4bcd88dda70ddda36126f390/1A/ISpaBuilder.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1zH0s4CGB6TQ1zrBaLQhUyrYgrH" />
   <component name="ProjectViewState">
@@ -113,6 +112,7 @@
       <workItem from="1634989184648" duration="4012000" />
       <workItem from="1635207176532" duration="12267000" />
       <workItem from="1635450549762" duration="6671000" />
+      <workItem from="1635533653338" duration="2832000" />
     </task>
     <servers />
   </component>
