@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1637538b-1fe3-427e-8125-e021b3644f29" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ACE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ACE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ACE/ClientApp/src/components/PostPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/ACE/ClientApp/src/components/PostPage.js" afterDir="false" />
-    </list>
+    <list default="true" id="1637538b-1fe3-427e-8125-e021b3644f29" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +31,12 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f727163ee11949a8bf0479531b672d911bbb78/5F/ObjectResult.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/879e64150fe442079fadd555ede677aa8f5788/394/FileStream.Windows.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/eb5b981fde4345aab9d6337d29c4c9e1a578/A/HostingAbstractionsHostExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ACE/ClientApp/package-lock.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f727163ee11949a8bf0479531b672d911bbb78/38/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a8985db189514fc19b1912b4352bf7952eb78/77/d34feecc/BlockingCollection`1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1zH0s4CGB6TQ1zrBaLQhUyrYgrH" />
   <component name="ProjectViewState">
@@ -54,8 +56,9 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
-    <property name="ts.external.directory.path" value="C:\Users\user\Desktop\TeamA\ACE\ACE\ClientApp\node_modules\typescript\lib" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+    <property name="ts.external.directory.path" value="C:\Users\user\Desktop\Team\ACE\ACE\ClientApp\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.ACE">
@@ -113,6 +116,9 @@
       <workItem from="1635207176532" duration="12267000" />
       <workItem from="1635450549762" duration="6671000" />
       <workItem from="1635533653338" duration="2832000" />
+      <workItem from="1636244627957" duration="6524000" />
+      <workItem from="1636260048292" duration="17844000" />
+      <workItem from="1636324792815" duration="6872000" />
     </task>
     <servers />
   </component>
