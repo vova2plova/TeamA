@@ -29,9 +29,6 @@ export class Home extends Component {
             <h2 className="inactiveHome underline">Маркетинг</h2>
           </form>
           </div>
-          <dropDown>
-              
-          </dropDown>
           <div id="formHome">
               <button className="dropDownBar" onClick= {this.dropDown}>
                   Все подряд

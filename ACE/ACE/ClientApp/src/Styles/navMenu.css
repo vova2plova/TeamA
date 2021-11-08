@@ -22,3 +22,10 @@ input[type=search]
 .box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
+
+.LogOut{
+  text-align: center;
+  border: none;
+  margin-top: auto;
+  margin-bottom: auto;
+}

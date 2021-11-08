@@ -58,14 +58,12 @@ export class SignIn extends Component {
             const data = await response.json()
             this.setState( {User: data, auth : true})
             window.location.assign('https://localhost:5001/');
-            // console.log("#")
         } else {
             const errorData = await response.json();
             console.log("errors", errorData);
             alert("Неверный логин или пароль")
         }
     }
-
     render() {
         return (
             <div className="wrapper fadeInDown">
@@ -81,7 +79,7 @@ export class SignIn extends Component {
                         <input type="text" id="login" className="fadeIn second" name="login" placeholder="login"/>
                         <input type="password" id="inputPassword" className="fadeIn third" name="login"
                                placeholder="password"/>
-                        <input type="button" className="fadeIn fourth" value="Войти" onClick={this.LogIn}/>
+                        <input type="submit" className="fadeIn fourth" value="Войти" onClick={this.LogIn}/>
                     </form>
                     <div id="formFooter">
                         <a className="underlineHover" href="#">Забыли пороль?</a>

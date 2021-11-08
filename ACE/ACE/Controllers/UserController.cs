@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using ACE.MODELS;
@@ -12,8 +13,6 @@ namespace ACE.Controllers
     public class UserController : ControllerBase
     {
         private readonly ILogger<UserController> _logger;
-
-        private User _user;
         
         public UserController(ILogger<UserController> logger)
         {
@@ -21,9 +20,14 @@ namespace ACE.Controllers
         }
 
         [HttpGet]
-        public User Get()
+        public ActionResult<User> Get()
         {
-            return (_user);
+            var _user = new User();
+            _user.nickName = "Vova2plova";
+            _user.userDick = "img";
+            _user.userEmail = "@";
+            _user.userPassword = "123";
+            return Ok(_user);
         }   
 
         [HttpPost]
