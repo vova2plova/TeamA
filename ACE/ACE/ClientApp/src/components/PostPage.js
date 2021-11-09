@@ -17,16 +17,19 @@ export class PostPage extends Component {
     
     postComment = () =>{
         let contentEditable = document.querySelector('[contenteditable]');
-        const newComment = {
-            nickname : "standart",
-            comment : contentEditable.textContent,
-            date : Date().toString(),
-            img : null
+        if (contentEditable.textContent !== "") {
+            const newComment = {
+                nickname: "standart",
+                comment: contentEditable.textContent,
+                date: Date().toString(),
+                img: null
+            }
+            contentEditable.textContent = ""
+            this.state.post.push(newComment)
+            this.setState(this.state);
+        }else{
+            alert("Нет текста")
         }
-        contentEditable.textContent = ""
-        this.state.post.push(newComment)
-        this.setState(this.state);
-        console.log(this.state)
     }
     
     render() {
@@ -37,11 +40,12 @@ export class PostPage extends Component {
                         <div id = "authorInfo">
                             <div className = "infoPlace">
                                 <img className="postIconHolder" src = "https://catherineasquithgallery.com/uploads/posts/2021-03/1614560341_16-p-ikonki-na-belom-fone-18.png" alt = "UserIcon"/>
-                                <div id = "authorRate">123.5</div>
+                                <div id = "authorRate">123</div>
+                                <div id = "postRate">12</div>
                                 <a className="author" href="#">vova2plova</a>
                             </div>
                             <div className = "subButtonPlace">
-                                <button type = "submit" className="subButton">Подписаться </button>
+                                <button type = "button" className="subButton">Понравилось</button>
                             </div>
                         </div>
                         <div id = "postContent">
@@ -58,7 +62,7 @@ export class PostPage extends Component {
                         </div>
                         <div>
                             {this.state.post.map((post) => 
-                                <Comments post={post} key={post.index}/>
+                                <Comments post={post} key={Math.random(1,10000)}/>
                             )}
                         </div>
                     </div>

@@ -1,7 +1,6 @@
 ﻿import React, {Component} from 'react';
 import {NavLink} from "reactstrap";
-import {Link, Route} from 'react-router-dom';
-import {NavMenu} from "./NavMenu";
+import {Link} from 'react-router-dom';
 
 
 export class SignIn extends Component {
@@ -82,10 +81,11 @@ export class SignIn extends Component {
                         <input type="submit" className="fadeIn fourth" value="Войти" onClick={this.LogIn}/>
                     </form>
                     <div id="formFooter">
-                        <a className="underlineHover" href="#">Забыли пороль?</a>
+                        <a className="underlineHover" href="#">Забыли пароль?</a>
                     </div>
                 </div>
             </div>
+            
         )
     }
 }

@@ -23,17 +23,17 @@ namespace ACE.Controllers
         public ActionResult<User> Get()
         {
             var _user = new User();
-            _user.nickName = "Vova2plova";
-            _user.userDick = "img";
-            _user.userEmail = "@";
-            _user.userPassword = "123";
+            _user.NickName = "Vova2plova";
+            _user.Avatar = "img";
+            _user.Email = "@";
+            _user.Password = "123";
             return Ok(_user);
         }   
 
         [HttpPost]
         public ActionResult<User> Post(User body)
         {
-            if ((body.nickName == "vova2plova") && (body.userPassword == "123"))
+            if ((body.NickName == "vova2plova") && (body.Password == "123"))
                 return Ok(body);
             return BadRequest(body);
         }

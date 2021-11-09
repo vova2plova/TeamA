@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import '../Styles/navMenu.css';
-import {SignIn} from "./SignIn";
 
 export class NavMenu extends Component {
     static displayName = NavMenu.name;
@@ -40,7 +39,7 @@ export class NavMenu extends Component {
         }
     }
 
-    LogOut(){
+    LogOut(){   
         this.setState({auth: false});
     }
 

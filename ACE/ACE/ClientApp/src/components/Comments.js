@@ -1,11 +1,11 @@
-﻿import React, {Component} from 'react';
+﻿import React from 'react';
 import '../Styles/comments.css'
 
 const Comments = (props) => {
     return (
         <div>
             <div className="commentPlace">
-                <img className="iconHolder" src = {props.post.img}/>
+                <img className="iconHolder" src = {props.post.img} alt=""/>
                 <div className="commentAuthor">
                     <a href = "#" className="commentAuthor">{props.post.nickname}
                         <p className="datetime">{props.post.date}</p>

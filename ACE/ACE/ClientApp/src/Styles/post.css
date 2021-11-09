@@ -58,6 +58,21 @@
     color:#56baed;
 }
 
+#postRate{
+    position: relative;
+    text-align: center;
+    margin-left: 2em;
+    display: inline-block;
+    vertical-align: middle;
+    color:#56baed;
+}
+
+#postRate:after{
+    content: "Рейтинг поста";
+    display: block;
+    color:black;
+}
+
 #authorRate:after{
     content: "Рейтинг автора";
     display: block;
@@ -71,19 +86,24 @@
 }
 
 .subButton{
+    background-color: #56baed;
     border: none;
-    text-decoration: none;
-    line-height: 3em;
-    font-size: 0.5em;
-    border-radius: 5px;
-    color: black;
-    letter-spacing: 1px;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
+    color: white;
+    padding: 3px 16px;
     text-align: center;
-    background: #56baed;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
-    transition: .3s;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(95,186,233,0.4);
+    box-shadow: 0 1px 3px 0 rgba(95,186,233,0.4);
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 512px){
@@ -94,7 +114,6 @@
 
 .infoPlace{
     display: inline-block;
-    width: 20em;
 }
 
 .subButtonPlace {

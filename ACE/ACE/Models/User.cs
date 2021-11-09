@@ -4,10 +4,12 @@ namespace ACE.MODELS
 {
     public class User
     {
-        public string nickName { get; set; }
-        public string userDick { get; set; }
-        public string userEmail { get; set; }
-        public string userPassword { get; set; }
-
+        public string NickName { get; set; }
+        public string Avatar { get; set; }
+        public string Email { get; set; }
+        public int Stars { get; set; }
+        public string Password { get; set; }
+        public string PasswordConfirm { get; set; }
+        
     }
 }
