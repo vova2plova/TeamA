@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1637538b-1fe3-427e-8125-e021b3644f29" name="Changes" comment="" />
+    <list default="true" id="1637538b-1fe3-427e-8125-e021b3644f29" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ACE/Controllers/CommentControllers.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ACE/Controllers/PostControllers.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ACE/WebContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ACE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ACE/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACE/ACE.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ACE/ACE.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACE/Models/Comment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ACE/Models/Comment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACE/Models/Post.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ACE/Models/Post.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACE/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ACE/Models/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACE/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ACE/Startup.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,12 +41,8 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f727163ee11949a8bf0479531b672d911bbb78/5F/ObjectResult.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/879e64150fe442079fadd555ede677aa8f5788/394/FileStream.Windows.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/eb5b981fde4345aab9d6337d29c4c9e1a578/A/HostingAbstractionsHostExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ACE/ClientApp/package-lock.json" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f727163ee11949a8bf0479531b672d911bbb78/38/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a8985db189514fc19b1912b4352bf7952eb78/77/d34feecc/BlockingCollection`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c7788b2bc733412d8ee39c302ff7ce5713578/2/Host.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1zH0s4CGB6TQ1zrBaLQhUyrYgrH" />
   <component name="ProjectViewState">
@@ -125,6 +131,7 @@
       <workItem from="1636550944406" duration="3158000" />
       <workItem from="1636559732450" duration="1717000" />
       <workItem from="1636733741585" duration="7455000" />
+      <workItem from="1636746912788" duration="6060000" />
     </task>
     <servers />
   </component>
