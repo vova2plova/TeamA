@@ -5,39 +5,13 @@ import {Link} from 'react-router-dom';
 
 export class SignIn extends Component {
     static displayName = SignIn.name;
+    static _user;
 
     constructor(props) {
         super(props);
         this.state = {User: null, auth : false};
         this.LogIn = this.LogIn.bind(this);
     }
-
-    // componentDidMount() {
-    //     console.log(this.state)
-    // }
-    //
-    // user = {
-    //     nickName: "wicheril",
-    //     userDick: "img",
-    //     userEmail: "@mail.ru",
-    //     userPassword: "321"
-    // }
-
-    // async UserSet() {
-    //     const response = await fetch("api/User", {
-    //         method: "POST",
-    //         headers: {"Accept": "application/json", "Content-Type": "application/json"},
-    //         body: JSON.stringify(this.user)
-    //     })
-    //     if (response.ok === true) {
-    //         const data = await response.json();
-    //         this.setState({User: data, loading: false});
-    //         console.log(this.state);
-    //     } else {
-    //         const errorData = await response.json();
-    //         console.log("errors", errorData, response.status);
-    //     }
-    // }
     
     async LogIn(){
         let login = document.getElementsByTagName("input")[0]

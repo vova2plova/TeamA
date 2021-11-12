@@ -34,7 +34,6 @@ export class NavMenu extends Component {
         const response = await fetch('api/User');
         if (response.ok === true) {
             const data = await response.json();
-            console.log(data);
             this.setState({nick: data, auth: true, loading: false});
         }
     }
@@ -58,7 +57,10 @@ export class NavMenu extends Component {
                                         <NavLink tag={Link} className="text-dark" to="/">Здравствуйте, {this.state.nick.nickName}</NavLink>
                                     </NavItem>
                                     <NavItem>
-                                        <NavLink tag={Link} to="/" className="text-dark" onClick={this.LogOut}>Выход</NavLink>
+                                        <NavLink tag={Link} className="text-dark" to="/CreatePostPage">Написать пост</NavLink>
+                                    </NavItem>
+                                    <NavItem>
+                                        <NavLink tag={Link} className="text-dark" to="/" onClick={this.LogOut}>Выход</NavLink>
                                     </NavItem>
                                 </ul>
                             </Collapse>

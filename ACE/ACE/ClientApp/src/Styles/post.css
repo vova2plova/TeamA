@@ -106,6 +106,10 @@
     transition: all 0.3s ease-in-out;
 }
 
+.createPost{
+    color: #1b6ec2;
+}
+
 @media (max-width: 512px){
     #authorInfo{
         display: none;
