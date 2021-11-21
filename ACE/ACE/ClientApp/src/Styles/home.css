@@ -40,6 +40,7 @@
     border-radius: 10px 10px 10px 10px;
     background: #fff;
     width: 90%;
+    overflow-wrap: break-word;
     max-width: 90em;
     position: relative;
     padding: 15px;
@@ -55,6 +56,7 @@
 .tittle{
     color: #000000;
     font-size: 2em;
+    display: block;
 }
 
 .description{
@@ -63,8 +65,9 @@
 }
 
 .imgHolder{
-    max-width: 90em;
-    object-fit: cover;
+    /*max-width: 90em;*/
+    /*max-height: 30em;*/
+    /*object-fit: cover;*/
     position: relative;
     padding-bottom: 1em;
     width: 100%;
@@ -78,6 +81,9 @@
     display: inline-block;
 }
 
+.date{
+    margin-left:1em;
+}
 .Continue{
     /*margin-top: 0.5em;*/
     display: block;

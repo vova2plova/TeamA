@@ -16,8 +16,17 @@ namespace ACE.Controllers
             db = context;
         }
         
+        
+        
+        [HttpGet("AboutAll")]
+        public ActionResult<Post[]> GetAll()
+        {
+            var posts = db.Posts.ToArray();
+            return Ok(posts);
+        }
+        
         [HttpPost("CreatePost")]
-        public ActionResult<Post> Login(Post body)
+        public ActionResult<Post> Post(Post body)
         {
             var data = DateTime.Now.ToString();
             body.Date = data;

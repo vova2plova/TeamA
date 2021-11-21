@@ -8,6 +8,7 @@ import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
 import { PostPage} from './components/PostPage';
 import { CreatePostPage } from "./components/CreatePostPage";
+import { Profile} from "./components/Profile";
 
 import './Styles/custom.css'
 import './Styles/sign.css'
@@ -27,6 +28,7 @@ export default class App extends Component {
                 <Route path='/counter' component={Counter} />
                 <Route path='/fetch-data' component={FetchData} />
                 <Route path='/PostPage' component={PostPage} />
+                <Route path='/Profile' component={Profile}/>
                 <Route path='/CreatePostPage' component={CreatePostPage}/>
             </Layout>
         );

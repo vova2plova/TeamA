@@ -6,6 +6,26 @@ import '../Styles/dropDown.css'
 export class Home extends Component {
     static displayName = Home.name;
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            post : []
+        }
+    }
+    
+    componentDidMount() {
+        this.LoadPosts()
+    }
+    
+    async LoadPosts(){
+        const response = await fetch("api/Post/AboutAll");
+        if (response.ok) {
+            const data = await response.json();
+            this.setState({post : data});
+            console.log(this.state.post);
+        }
+    }
+
 
     dropDown(){ 
         if (document.getElementById('show').style.display === 'block') {
@@ -19,7 +39,7 @@ export class Home extends Component {
         return (
             <div>
                 <div id = "formHome">
-                    <h1> Все потоки</h1>
+                    <h1>Все потоки</h1>
                     <form>
                         <h2 className="activeHome">Обо всем</h2>
                         <h2 className="inactiveHome underline">Программирование</h2>
@@ -36,11 +56,9 @@ export class Home extends Component {
                         <a href = "#" className="dropDownContent">Новые </a>
                     </div>
                 </div>
-                <PostItem/>
-                <PostItem/>
-                <PostItem/>
-                <PostItem/>
-                <PostItem/>
+                {this.state.post.map((post) =>
+                    <PostItem postInfo={post} key = {Math.random(1,10000)}/>
+                )}
             </div>
         );
     }
