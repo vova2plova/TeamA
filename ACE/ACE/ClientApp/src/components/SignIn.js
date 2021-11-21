@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom';
 
 export class SignIn extends Component {
     static displayName = SignIn.name;
-    static _user;
 
     constructor(props) {
         super(props);
@@ -17,12 +16,10 @@ export class SignIn extends Component {
         let login = document.getElementsByTagName("input")[0]
         let password = document.getElementsByTagName("input")[1]
         let user = {
-            nickName : login.value,
-            userDick : "img",
-            userEmail: "@mail.ru",
-            userPassword : password.value
+            NickName : login.value,
+            Password : password.value
         }
-        const response = await fetch("api/User", {
+        const response = await fetch("api/User/login", {
             method: "POST",
             headers: {"Accept": "application/json", "Content-Type": "application/json"},
             body: JSON.stringify(user)
@@ -30,6 +27,7 @@ export class SignIn extends Component {
         if (response.ok === true) {
             const data = await response.json()
             this.setState( {User: data, auth : true})
+            localStorage.setItem("User", JSON.stringify(data));
             window.location.assign('https://localhost:5001/');
         } else {
             const errorData = await response.json();
@@ -52,7 +50,7 @@ export class SignIn extends Component {
                         <input type="text" id="login" className="fadeIn second" name="login" placeholder="login"/>
                         <input type="password" id="inputPassword" className="fadeIn third" name="login"
                                placeholder="password"/>
-                        <input type="submit" className="fadeIn fourth" value="Войти" onClick={this.LogIn}/>
+                        <input type="button" className="fadeIn fourth" value="Войти" onClick={this.LogIn}/>
                     </form>
                     <div id="formFooter">
                         <a className="underlineHover" href="#">Забыли пароль?</a>

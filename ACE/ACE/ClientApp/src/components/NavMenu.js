@@ -13,7 +13,11 @@ export class NavMenu extends Component {
         this.isAuth = this.isAuth.bind(this);
         this.toggleNavbar = this.toggleNavbar.bind(this);
         this.state = {
-            nick : null,
+            nick : {
+                nickName : "",
+                Avatar : "",
+                Password : ""
+            },
             loading : true,
             auth : false,
             collapsed: true
@@ -30,16 +34,14 @@ export class NavMenu extends Component {
         this.isAuth()
     }
 
-    async isAuth(){
-        const response = await fetch('api/User');
-        if (response.ok === true) {
-            const data = await response.json();
-            this.setState({nick: data, auth: true, loading: false});
-        }
+    isAuth(){
+        if (localStorage.getItem("User"))
+            this.setState({nick : JSON.parse(localStorage.getItem("User")) ,auth:true});
     }
 
     LogOut(){   
         this.setState({auth: false});
+        localStorage.removeItem("User");
     }
 
 

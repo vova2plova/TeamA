@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Diagnostics;
+using System.Linq;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using ACE.MODELS;
@@ -12,29 +14,34 @@ namespace ACE.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly ILogger<UserController> _logger;
-        public UserController(ILogger<UserController> logger)
+        private WebContext db;
+        public UserController(WebContext context)
         {
-            _logger = logger;
+            db = context;
         }
 
-        [HttpGet]
-        public ActionResult<User> Get()
-        {
-            var _user = new User();
-            _user.NickName = "Vova2plova";
-            _user.Avatar = "img";
-            _user.Email = "@";
-            _user.Password = "123";
-            return Ok(_user);
-        }   
+        // [HttpGet]
+        // public ActionResult<User> Get()
+        // {
+        //     return Ok(_user);
+        // }   
 
-        [HttpPost]
-        public ActionResult<User> Post(User body)
+        [HttpPost("login")]
+        public ActionResult<User> Login(User body)
         {
-            if ((body.NickName == "vova2plova") && (body.Password == "123"))
-                return Ok(body);
-            return BadRequest(body);
+            var _user = db.Users.FirstOrDefault(x => x.NickName == body.NickName &&
+                                                     x.Password == body.Password);
+            if (_user != null)
+                return Ok(_user);
+            return BadRequest("Пользователь с таким логином и паролем не найден");
+        }
+        
+        [HttpPost("register")]
+        public ActionResult<User> Register(User body)
+        {
+            db.Users.Add(body);
+            db.SaveChanges();
+            return Ok(body);
         }
     }
 }

@@ -32,6 +32,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/ACE/ClientApp/package-lock.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/package-lock.json" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1zH0s4CGB6TQ1zrBaLQhUyrYgrH" />
   <component name="ProjectViewState">
@@ -39,6 +40,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3502052" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -53,7 +55,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
-    <property name="ts.external.directory.path" value="C:\Users\user\Desktop\Team\ACE\ACE\ClientApp\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Users\user\Desktop\TeamA\ACE\ACE\ClientApp\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.ACE">
@@ -122,7 +124,13 @@
       <workItem from="1636733741585" duration="7455000" />
       <workItem from="1636746912788" duration="6060000" />
       <workItem from="1636760603041" duration="2122000" />
-      <workItem from="1636847880533" duration="1849000" />
+      <workItem from="1636847880533" duration="2492000" />
+      <workItem from="1636993086507" duration="6504000" />
+      <workItem from="1636999850701" duration="435000" />
+      <workItem from="1637033354635" duration="1353000" />
+      <workItem from="1637155860715" duration="635000" />
+      <workItem from="1637446913002" duration="13148000" />
+      <workItem from="1637496723734" duration="2765000" />
     </task>
     <servers />
   </component>

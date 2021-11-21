@@ -7,6 +7,8 @@ namespace ACE.MODELS
     {
         public string User { get; set; }
         
+        public string Avatar { get; set; }
+        
         public long Id { get; set; }
         
         public string Date { get; set; }

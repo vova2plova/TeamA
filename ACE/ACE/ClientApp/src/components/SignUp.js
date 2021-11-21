@@ -5,6 +5,35 @@ import {NavLink} from "reactstrap";
 export class SignUp extends Component {
     static displayName = SignUp.name;
 
+    constructor(props) {
+        super(props);
+        this.state = {User: null};
+        this.Register = this.Register.bind(this);
+    }
+    
+    async Register(){
+        let login = document.getElementsByTagName("input")[0]
+        let password = document.getElementsByTagName("input")[1]
+        let user = {
+            NickName : login.value,
+            Password : password.value
+        }
+        const response = await fetch("api/User/register", {
+            method: "POST",
+            headers: {"Accept": "application/json", "Content-Type": "application/json"},
+            body: JSON.stringify(user)
+        })
+        if (response.ok === true) {
+            const data = await response.json()
+            this.setState( {User: data, auth : true})
+            localStorage.setItem("User", JSON.stringify(data));
+            window.location.assign('https://localhost:5001/');
+        } else {
+            const errorData = await response.json();
+            console.log("errors", errorData);
+            alert("Неверный логин или пароль")
+        }
+    }
 
     render () {
         return (
@@ -19,10 +48,8 @@ export class SignUp extends Component {
                     </div>
                     <form>
                         <input type="text" id="login" className="fadeIn second" name="login" placeholder="Имя пользователя" />
-                        <input type="text" id="" className="fadeIn second" name="login" placeholder="Электронная почта" />
                         <input type="text" id="password" className="fadeIn third" name="login" placeholder="Пароль" />
-                        <input type="text" id = "password" className="fadeIn third" name="login" placeholder="Повторите пароль" />
-                        <input type="submit" className="fadeIn fourth" value="Зарегистрироваться"/>
+                        <input type="submit" className="fadeIn fourth" value="Зарегистрироваться" onClick={this.Register}/>
                     </form>
                 </div>
             </div>
