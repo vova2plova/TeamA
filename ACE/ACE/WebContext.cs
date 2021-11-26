@@ -9,14 +9,13 @@ namespace ACE
         public DbSet<Post> Posts { get; set; }
         public DbSet<User> Users { get; set; }
         
-        public WebContext()
-        {
-            Database.EnsureCreated();
-        }
+        // public WebContext()
+        // {
+        //     
+        // }
+
+        public WebContext(DbContextOptions<WebContext> options) : base(options){}
         
-        public WebContext(DbContextOptions<WebContext> options) : base(options)
-        {
-            
-        }
+        
     }
 }

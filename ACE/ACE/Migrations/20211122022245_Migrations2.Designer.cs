@@ -3,15 +3,17 @@ using System;
 using ACE;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace ACE.Migrations
 {
     [DbContext(typeof(WebContext))]
-    partial class WebContextModelSnapshot : ModelSnapshot
+    [Migration("20211122022245_Migrations2")]
+    partial class Migrations2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,9 +23,9 @@ namespace ACE.Migrations
 
             modelBuilder.Entity("ACE.MODELS.Comment", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
+                        .HasColumnType("bigint")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("Avatar")
@@ -32,8 +34,8 @@ namespace ACE.Migrations
                     b.Property<string>("Date")
                         .HasColumnType("text");
 
-                    b.Property<int?>("PostId")
-                        .HasColumnType("integer");
+                    b.Property<long?>("PostId")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Text")
                         .HasColumnType("text");
@@ -50,9 +52,9 @@ namespace ACE.Migrations
 
             modelBuilder.Entity("ACE.MODELS.Post", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
+                        .HasColumnType("bigint")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("Date")
@@ -79,30 +81,25 @@ namespace ACE.Migrations
                     b.Property<string>("Text")
                         .HasColumnType("text");
 
-                    b.Property<int>("userId")
-                        .HasColumnType("integer");
+                    b.Property<string>("UserNickName")
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("userId");
+                    b.HasIndex("UserNickName");
 
                     b.ToTable("Posts");
                 });
 
             modelBuilder.Entity("ACE.MODELS.User", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+                    b.Property<string>("NickName")
+                        .HasColumnType("text");
 
                     b.Property<string>("Avatar")
                         .HasColumnType("text");
 
                     b.Property<string>("Email")
-                        .HasColumnType("text");
-
-                    b.Property<string>("NickName")
                         .HasColumnType("text");
 
                     b.Property<string>("Password")
@@ -114,7 +111,7 @@ namespace ACE.Migrations
                     b.Property<int>("Stars")
                         .HasColumnType("integer");
 
-                    b.HasKey("Id");
+                    b.HasKey("NickName");
 
                     b.ToTable("Users");
                 });
@@ -128,21 +125,16 @@ namespace ACE.Migrations
 
             modelBuilder.Entity("ACE.MODELS.Post", b =>
                 {
-                    b.HasOne("ACE.MODELS.User", null)
-                        .WithMany("Post")
-                        .HasForeignKey("userId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("ACE.MODELS.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserNickName");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("ACE.MODELS.Post", b =>
                 {
                     b.Navigation("Comments");
-                });
-
-            modelBuilder.Entity("ACE.MODELS.User", b =>
-                {
-                    b.Navigation("Post");
                 });
 #pragma warning restore 612, 618
         }

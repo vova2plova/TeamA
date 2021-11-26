@@ -15,6 +15,17 @@ export class PostPage extends Component {
         }
     }
     
+    componentDidMount() {
+        // loadPage();
+    }
+    
+    async loadPage() {
+        const response = await fetch("api/Post/GetPost")
+        const data = await response.json();
+        
+    }
+    
+
     postComment = () =>{
         let contentEditable = document.querySelector('[contenteditable]');
         if (contentEditable.textContent !== "") {
@@ -31,7 +42,7 @@ export class PostPage extends Component {
             alert("Нет текста")
         }
     }
-    
+        
     render() {
         return (
             <div>

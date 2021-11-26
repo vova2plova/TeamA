@@ -14,9 +14,11 @@ export class SignUp extends Component {
     async Register(){
         let login = document.getElementsByTagName("input")[0]
         let password = document.getElementsByTagName("input")[1]
+        let avatar = document.getElementsByTagName("input")[2]
         let user = {
             NickName : login.value,
-            Password : password.value
+            Password : password.value,
+            Avatar : avatar.value
         }
         const response = await fetch("api/User/register", {
             method: "POST",
@@ -47,9 +49,10 @@ export class SignUp extends Component {
                         <img src="https://cdn131.picsart.com/311079241107211.png" id="icon" alt="Typical User"/>
                     </div>
                     <form>
-                        <input type="text" id="login" className="fadeIn second" name="login" placeholder="Имя пользователя" />
-                        <input type="text" id="password" className="fadeIn third" name="login" placeholder="Пароль" />
-                        <input type="submit" className="fadeIn fourth" value="Зарегистрироваться" onClick={this.Register}/>
+                        <input type="text" id="login" className="fadeIn first" name="login" placeholder="Имя пользователя" />
+                        <input type="text" id="password" className="fadeIn second" name="login" placeholder="Пароль" />
+                        <input type="text" id="login" className="fadeIn third"   name="login" placeholder="Ссылка на изображение" />
+                        <input type="button" className="fadeIn fourth SubMit" value="Зарегистрироваться" onClick={this.Register}/>
                     </form>
                 </div>
             </div>

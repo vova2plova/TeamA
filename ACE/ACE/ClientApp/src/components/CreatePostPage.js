@@ -12,7 +12,7 @@ export class CreatePostPage extends Component {
             PreviewText: "",
             PreviewHeader: "",
             Text : "",
-            User : "",
+            UserId : "",
             Tag : ""
         };
         
@@ -28,10 +28,6 @@ export class CreatePostPage extends Component {
             contentEditable.textContent = ""
         } else
             alert("Ошибка добавления")
-    }
-    
-    AddTag = () => {
-        
     }
     
     AddImage = () =>{
@@ -61,19 +57,17 @@ export class CreatePostPage extends Component {
     }
     
     async AddPost(){
-        if (this.state.Post.length > 4) {
+        // if (this.state.Post.length > 4) {
             let rad = document.getElementsByTagName("input");
             for (var i = 0; i < rad.length; i++) {
                 if (rad[i].checked) {
                     this.setState({Tag: document.getElementsByTagName("label")[i - 3].textContent.toUpperCase()})
                 }
             }
-            let _user = JSON.parse(localStorage.getItem("User")).nickName
-            await this.setState({User: _user})
-
+            let _user = JSON.parse(localStorage.getItem("User"))
+            await this.setState({UserId: _user.id})
             if (this.state.Tag === "")
                 this.setState({Tag: "ОБО ВСЁМ"})
-            console.log(this.state)
             this.setState({Text: ReactDOMServer.renderToString(this.state.Post)})
             const response = await fetch("api/Post/CreatePost", {
                 method: "POST",
@@ -81,15 +75,15 @@ export class CreatePostPage extends Component {
                 body: JSON.stringify(this.state)
             })
             if (response.ok === true) {
-                let data = response.json();
+                let data = await response.json();
                 console.log(data);
             } else {
                 const errorData = await response.json();
                 console.log("errors", errorData);
                 alert("Ошибка создания поста")
             }
-        }else
-            alert("Пост слишком короткий, Создание такого поста невозможно")
+        // }else
+        //     alert("Пост слишком короткий, Создание такого поста невозможно")
     }
 
     render() {

@@ -9,7 +9,8 @@ export class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            post : []
+            post : [],
+            user : []
         }
     }
     
@@ -22,7 +23,18 @@ export class Home extends Component {
         if (response.ok) {
             const data = await response.json();
             this.setState({post : data});
-            console.log(this.state.post);
+            await this.loadUser()
+            // console.log(this.state)
+        }
+    }
+    
+    async loadUser(){
+        for (var i = 0; i < this.state.post.length; i++) {
+            const response = await fetch("api/User/" + this.state.post[i].id.toString())
+            const data = await response.json();
+            this.state.user.push(data);
+            this.setState(this.state);
+            // console.log(data);
         }
     }
 
@@ -56,8 +68,8 @@ export class Home extends Component {
                         <a href = "#" className="dropDownContent">Новые </a>
                     </div>
                 </div>
-                {this.state.post.map((post) =>
-                    <PostItem postInfo={post} key = {Math.random(1,10000)}/>
+                {this.state.post.map((post, index) =>
+                    <PostItem postInfo={post} user = {this.state.user[index]} key = {Math.random(1,10000)}/>
                 )}
             </div>
         );

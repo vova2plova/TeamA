@@ -54,7 +54,8 @@
 }
 
 .tittle{
-    color: #000000;
+    margin-top: 0.2em;
+    /*color: #000000;*/
     font-size: 2em;
     display: block;
 }
@@ -74,10 +75,9 @@
 }
 
 .iconHolder{
-    width: 24px;
-    padding-bottom: 0.1em;
-    height: 24px;
-    padding-right: 0.3em;
+    width: 32px;
+    margin-right: 0.5em;
+    height: 32px;
     display: inline-block;
 }
 

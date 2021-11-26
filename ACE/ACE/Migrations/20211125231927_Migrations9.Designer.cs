@@ -3,15 +3,17 @@ using System;
 using ACE;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace ACE.Migrations
 {
     [DbContext(typeof(WebContext))]
-    partial class WebContextModelSnapshot : ModelSnapshot
+    [Migration("20211125231927_Migrations9")]
+    partial class Migrations9
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -79,7 +81,7 @@ namespace ACE.Migrations
                     b.Property<string>("Text")
                         .HasColumnType("text");
 
-                    b.Property<int>("userId")
+                    b.Property<int?>("userId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
@@ -128,21 +130,16 @@ namespace ACE.Migrations
 
             modelBuilder.Entity("ACE.MODELS.Post", b =>
                 {
-                    b.HasOne("ACE.MODELS.User", null)
-                        .WithMany("Post")
-                        .HasForeignKey("userId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("ACE.MODELS.User", "user")
+                        .WithMany()
+                        .HasForeignKey("userId");
+
+                    b.Navigation("user");
                 });
 
             modelBuilder.Entity("ACE.MODELS.Post", b =>
                 {
                     b.Navigation("Comments");
-                });
-
-            modelBuilder.Entity("ACE.MODELS.User", b =>
-                {
-                    b.Navigation("Post");
                 });
 #pragma warning restore 612, 618
         }

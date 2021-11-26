@@ -25,16 +25,23 @@ namespace ACE.Controllers
         // {
         //     return Ok(_user);
         // }
-        
-        [HttpPost("Avatar")]
-        public ActionResult<User> AddAvatar(User body)
+
+        [HttpGet("{id_post}")]
+        public ActionResult<User> GetUser(int id_post)
         {
-            var _user = db.Users.FirstOrDefault(x => x.NickName == body.NickName);
-            if (_user != null)
-                db.Users.Update(_user);
-            return Ok(_user);
-            // return BadRequest("Пользователь с таким логином и паролем не найден");
+            var id = db.Posts.Find(id_post).userId;
+            return Ok(db.Users.Find(id));
+            // return Ok(db.Posts.Where(p => p.Id == id_post).Include(u => u.user));
         }
+        // [HttpPost("Avatar")]
+        // public ActionResult<User> AddAvatar(User body)
+        // {
+        //     var _user = db.Users.FirstOrDefault(x => x.NickName == body.NickName);
+        //     if (_user != null)
+        //         db.Users.Update(_user);
+        //     return Ok(_user);
+            // return BadRequest("Пользователь с таким логином и паролем не найден");
+        // }
 
         [HttpPost("login")]
         public ActionResult<User> Login(User body)

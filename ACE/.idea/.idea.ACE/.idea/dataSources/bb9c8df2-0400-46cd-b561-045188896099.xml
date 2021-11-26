@@ -784,8 +784,8 @@ false YEKT
 false Z
 false Zulu
 </TimeZones>
-      <IntrospectionStateNumber>1025</IntrospectionStateNumber>
-      <StartupTime>1637119213</StartupTime>
+      <IntrospectionStateNumber>1161</IntrospectionStateNumber>
+      <StartupTime>1637773288</StartupTime>
     </root>
     <database id="2" parent="1" name="Ace">
       <ObjectId>24576</ObjectId>
@@ -821,10 +821,11 @@ false Zulu
 13388||-9223372036854775808|U|G
 13388||10|U|G</Grants>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1026</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1162</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|24667|24668|1
-sequence|table|24682|24683|1
+      <Relations>sequence|table|24682|24683|1
+sequence|table|24667|24668|1
+sequence|table|24799|24675|7
 </Relations>
     </database>
     <role id="8" parent="1" name="pg_database_owner">
@@ -898,7 +899,7 @@ sequence|table|24682|24683|1
       <Comment>standard public schema</Comment>
       <StateNumber>527</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1026</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1162</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="25" parent="7" name="plpgsql">
@@ -1002,106 +1003,111 @@ sequence|table|24682|24683|1
     <sequence id="37" parent="24" name="Comments_Id_seq">
       <ObjectId>24682</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>919</StateNumber>
-      <DataType>bigint|0s</DataType>
+      <StateNumber>1141</StateNumber>
+      <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="38" parent="24" name="Posts_Id_seq">
       <ObjectId>24667</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>996</StateNumber>
-      <SequenceIdentity>null..2147483647</SequenceIdentity>
-      <DataType>bigint|0s</DataType>
+      <StateNumber>1141</StateNumber>
+      <DataType>integer|0s</DataType>
     </sequence>
-    <table id="39" parent="24" name="Comments">
+    <sequence id="39" parent="24" name="Users_Id_seq">
+      <ObjectId>24799</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1094</StateNumber>
+      <DataType>integer|0s</DataType>
+    </sequence>
+    <table id="40" parent="24" name="Comments">
       <ObjectId>24683</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1020</StateNumber>
+      <StateNumber>1153</StateNumber>
       <AccessMethodId>2</AccessMethodId>
     </table>
-    <table id="40" parent="24" name="Posts">
+    <table id="41" parent="24" name="Posts">
       <ObjectId>24668</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>999</StateNumber>
+      <StateNumber>1153</StateNumber>
       <AccessMethodId>2</AccessMethodId>
     </table>
-    <table id="41" parent="24" name="Users">
+    <table id="42" parent="24" name="Users">
       <ObjectId>24675</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>923</StateNumber>
+      <StateNumber>1152</StateNumber>
       <AccessMethodId>2</AccessMethodId>
     </table>
-    <table id="42" parent="24" name="__EFMigrationsHistory">
+    <table id="43" parent="24" name="__EFMigrationsHistory">
       <ObjectId>24662</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>918</StateNumber>
       <AccessMethodId>2</AccessMethodId>
     </table>
-    <column id="43" parent="39" name="Id">
+    <column id="44" parent="40" name="Id">
       <Position>1</Position>
-      <DataType>bigint|0s</DataType>
+      <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>919</StateNumber>
-      <TypeId>20</TypeId>
+      <StateNumber>1141</StateNumber>
+      <TypeId>23</TypeId>
       <IdentityKind>by-default</IdentityKind>
     </column>
-    <column id="44" parent="39" name="User">
+    <column id="45" parent="40" name="User">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <StateNumber>919</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="45" parent="39" name="Date">
+    <column id="46" parent="40" name="Date">
       <Position>3</Position>
       <DataType>text|0s</DataType>
       <StateNumber>919</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="46" parent="39" name="Text">
+    <column id="47" parent="40" name="Text">
       <Position>4</Position>
       <DataType>text|0s</DataType>
       <StateNumber>919</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="47" parent="39" name="PostId">
+    <column id="48" parent="40" name="PostId">
       <Position>5</Position>
-      <DataType>bigint|0s</DataType>
-      <StateNumber>919</StateNumber>
-      <TypeId>20</TypeId>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1141</StateNumber>
+      <TypeId>23</TypeId>
     </column>
-    <column id="48" parent="39" name="Avatar">
+    <column id="49" parent="40" name="Avatar">
       <Position>6</Position>
       <DataType>text|0s</DataType>
       <StateNumber>1020</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <index id="49" parent="39" name="PK_Comments">
-      <ObjectId>24688</ObjectId>
-      <StateNumber>999</StateNumber>
+    <index id="50" parent="40" name="PK_Comments">
+      <ObjectId>33019</ObjectId>
+      <StateNumber>1153</StateNumber>
       <ColNames>Id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
       <CollationIds>0</CollationIds>
-      <ClassIds>3124</ClassIds>
+      <ClassIds>1978</ClassIds>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="50" parent="39" name="IX_Comments_PostId">
-      <ObjectId>24695</ObjectId>
-      <StateNumber>999</StateNumber>
+    <index id="51" parent="40" name="IX_Comments_PostId">
+      <ObjectId>33005</ObjectId>
+      <StateNumber>1153</StateNumber>
       <ColNames>PostId</ColNames>
       <CollationIds>0</CollationIds>
-      <ClassIds>3124</ClassIds>
+      <ClassIds>1978</ClassIds>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="51" parent="39" name="PK_Comments">
-      <ObjectId>24689</ObjectId>
-      <StateNumber>919</StateNumber>
+    <key id="52" parent="40" name="PK_Comments">
+      <ObjectId>33020</ObjectId>
+      <StateNumber>1141</StateNumber>
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Comments</UnderlyingIndexName>
     </key>
-    <foreign-key id="52" parent="39" name="FK_Comments_Posts_PostId">
-      <ObjectId>24690</ObjectId>
-      <StateNumber>919</StateNumber>
+    <foreign-key id="53" parent="40" name="FK_Comments_Posts_PostId">
+      <ObjectId>33006</ObjectId>
+      <StateNumber>1141</StateNumber>
       <ColNames>PostId</ColNames>
       <RefTableId>24668</RefTableId>
       <RefColPositions>1</RefColPositions>
@@ -1110,168 +1116,184 @@ sequence|table|24682|24683|1
       <RefColNames>Id</RefColNames>
       <OnDelete>restrict</OnDelete>
     </foreign-key>
-    <column id="53" parent="40" name="Id">
+    <column id="54" parent="41" name="Id">
       <Position>1</Position>
-      <DataType>bigint|0s</DataType>
+      <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>919</StateNumber>
-      <TypeId>20</TypeId>
+      <StateNumber>1141</StateNumber>
+      <TypeId>23</TypeId>
       <IdentityKind>by-default</IdentityKind>
     </column>
-    <column id="54" parent="40" name="PreviewImage">
+    <column id="55" parent="41" name="PreviewImage">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <StateNumber>919</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="55" parent="40" name="PreviewText">
+    <column id="56" parent="41" name="PreviewText">
       <Position>3</Position>
       <DataType>text|0s</DataType>
       <StateNumber>919</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="56" parent="40" name="PreviewHeader">
+    <column id="57" parent="41" name="PreviewHeader">
       <Position>4</Position>
       <DataType>text|0s</DataType>
       <StateNumber>919</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="57" parent="40" name="Date">
+    <column id="58" parent="41" name="Date">
       <Position>5</Position>
       <DataType>text|0s</DataType>
       <StateNumber>919</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="58" parent="40" name="Tag">
+    <column id="59" parent="41" name="Tag">
       <Position>6</Position>
       <DataType>text|0s</DataType>
       <StateNumber>919</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="59" parent="40" name="Stars">
+    <column id="60" parent="41" name="Stars">
       <Position>7</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>919</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="60" parent="40" name="User">
-      <Position>8</Position>
-      <DataType>text|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>1006</StateNumber>
-      <TypeId>25</TypeId>
-    </column>
-    <column id="61" parent="40" name="Header">
+    <column id="61" parent="41" name="Header">
       <Position>9</Position>
       <DataType>text|0s</DataType>
       <StateNumber>919</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="62" parent="40" name="Text">
+    <column id="62" parent="41" name="Text">
       <Position>10</Position>
       <DataType>text|0s</DataType>
       <StateNumber>919</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <index id="63" parent="40" name="PK_Posts">
-      <ObjectId>24673</ObjectId>
-      <StateNumber>999</StateNumber>
+    <column id="63" parent="41" name="userId">
+      <Position>11</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1142</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="64" parent="41" name="PK_Posts">
+      <ObjectId>32991</ObjectId>
+      <StateNumber>1153</StateNumber>
       <ColNames>Id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
       <CollationIds>0</CollationIds>
-      <ClassIds>3124</ClassIds>
+      <ClassIds>1978</ClassIds>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="64" parent="40" name="PK_Posts">
-      <ObjectId>24674</ObjectId>
-      <StateNumber>919</StateNumber>
+    <index id="65" parent="41" name="IX_Posts_userId">
+      <ObjectId>33029</ObjectId>
+      <StateNumber>1153</StateNumber>
+      <ColNames>userId</ColNames>
+      <CollationIds>0</CollationIds>
+      <ClassIds>1978</ClassIds>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="66" parent="41" name="PK_Posts">
+      <ObjectId>32992</ObjectId>
+      <StateNumber>1141</StateNumber>
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Posts</UnderlyingIndexName>
     </key>
-    <foreign-key id="65" parent="40" name="UserPost">
-      <ObjectId>24696</ObjectId>
-      <StateNumber>923</StateNumber>
-      <ColNames>User</ColNames>
+    <foreign-key id="67" parent="41" name="FK_Posts_Users_userId">
+      <ObjectId>33030</ObjectId>
+      <StateNumber>1148</StateNumber>
+      <ColNames>userId</ColNames>
       <RefTableId>24675</RefTableId>
-      <RefColPositions>1</RefColPositions>
+      <RefColPositions>7</RefColPositions>
       <RefTableName>Users</RefTableName>
       <RefKeyName>PK_Users</RefKeyName>
-      <RefColNames>NickName</RefColNames>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="66" parent="41" name="NickName">
+    <column id="68" parent="42" name="NickName">
       <Position>1</Position>
       <DataType>text|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>919</StateNumber>
+      <StateNumber>1094</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="67" parent="41" name="Avatar">
+    <column id="69" parent="42" name="Avatar">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <StateNumber>919</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="68" parent="41" name="Email">
+    <column id="70" parent="42" name="Email">
       <Position>3</Position>
       <DataType>text|0s</DataType>
       <StateNumber>919</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="69" parent="41" name="Stars">
+    <column id="71" parent="42" name="Stars">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>919</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="70" parent="41" name="Password">
+    <column id="72" parent="42" name="Password">
       <Position>5</Position>
       <DataType>text|0s</DataType>
       <StateNumber>919</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="71" parent="41" name="PasswordConfirm">
+    <column id="73" parent="42" name="PasswordConfirm">
       <Position>6</Position>
       <DataType>text|0s</DataType>
       <StateNumber>919</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <index id="72" parent="41" name="PK_Users">
-      <ObjectId>24680</ObjectId>
-      <StateNumber>919</StateNumber>
-      <ColNames>NickName</ColNames>
+    <column id="74" parent="42" name="Id">
+      <Position>7</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1094</StateNumber>
+      <TypeId>23</TypeId>
+      <IdentityKind>by-default</IdentityKind>
+    </column>
+    <index id="75" parent="42" name="PK_Users">
+      <ObjectId>24805</ObjectId>
+      <StateNumber>1152</StateNumber>
+      <ColNames>Id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
-      <CollationIds>100</CollationIds>
-      <CollationNames>default</CollationNames>
-      <ClassIds>3126</ClassIds>
+      <CollationIds>0</CollationIds>
+      <ClassIds>1978</ClassIds>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="73" parent="41" name="PK_Users">
-      <ObjectId>24681</ObjectId>
-      <StateNumber>919</StateNumber>
-      <ColNames>NickName</ColNames>
+    <key id="76" parent="42" name="PK_Users">
+      <ObjectId>24806</ObjectId>
+      <StateNumber>1094</StateNumber>
+      <ColNames>Id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Users</UnderlyingIndexName>
     </key>
-    <column id="74" parent="42" name="MigrationId">
+    <column id="77" parent="43" name="MigrationId">
       <Position>1</Position>
       <DataType>varchar(150)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>918</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="75" parent="42" name="ProductVersion">
+    <column id="78" parent="43" name="ProductVersion">
       <Position>2</Position>
       <DataType>varchar(32)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>918</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="76" parent="42" name="PK___EFMigrationsHistory">
+    <index id="79" parent="43" name="PK___EFMigrationsHistory">
       <ObjectId>24665</ObjectId>
       <StateNumber>918</StateNumber>
       <ColNames>MigrationId</ColNames>
@@ -1282,7 +1304,7 @@ sequence|table|24682|24683|1
       <ClassIds>3126</ClassIds>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="77" parent="42" name="PK___EFMigrationsHistory">
+    <key id="80" parent="43" name="PK___EFMigrationsHistory">
       <ObjectId>24666</ObjectId>
       <StateNumber>918</StateNumber>
       <ColNames>MigrationId</ColNames>

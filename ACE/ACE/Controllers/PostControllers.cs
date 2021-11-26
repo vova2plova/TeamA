@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Linq;
 using ACE.MODELS;
+using Castle.Core.Internal;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -15,8 +17,13 @@ namespace ACE.Controllers
         {
             db = context;
         }
-        
-        
+
+        [HttpGet("GetPost")]
+        public ActionResult<Post> GetPost(long id)
+        {
+            var post = db.Posts.Find(id);
+            return Ok(post);
+        }
         
         [HttpGet("AboutAll")]
         public ActionResult<Post[]> GetAll()
@@ -28,8 +35,8 @@ namespace ACE.Controllers
         [HttpPost("CreatePost")]
         public ActionResult<Post> Post(Post body)
         {
-            var data = DateTime.Now.ToString();
-            body.Date = data;
+            var date = DateTime.Now.ToString();
+            body.Date = date;
             db.Posts.Add(body);
             db.SaveChanges();
             return Ok(body);

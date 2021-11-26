@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
-using Castle.Components.DictionaryAdapter;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ACE.MODELS
 {
@@ -17,9 +18,10 @@ namespace ACE.MODELS
         
         public int Stars { get; set; }
         
-        public string User { get; set; }
-        
-        public long Id { get; set; }
+        [ForeignKey("Users")]
+        public int userId { get; set; }
+        [Key]
+        public int Id { get; set; }
         
         public string Header { get; set; }
         

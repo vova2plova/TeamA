@@ -50,7 +50,7 @@ export class SignIn extends Component {
                         <input type="text" id="login" className="fadeIn second" name="login" placeholder="login"/>
                         <input type="password" id="inputPassword" className="fadeIn third" name="login"
                                placeholder="password"/>
-                        <input type="button" className="fadeIn fourth" value="Войти" onClick={this.LogIn}/>
+                        <input type="button" className="fadeIn fourth SubMit" value="Войти" onClick={this.LogIn}/>
                     </form>
                     <div id="formFooter">
                         <a className="underlineHover" href="#">Забыли пароль?</a>
