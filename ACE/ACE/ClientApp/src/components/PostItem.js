@@ -16,13 +16,6 @@ export class PostItem extends Component {
     convertToDom(string) {
         return ({__html : string})
     }
-    
-    
-    savePostId(){
-        localStorage.setItem("PostId", this.props.postInfo.id)
-        localStorage.setItem("UserId", this.props.user.id)
-    }
-    
 
     // async function LoadUser() {
     //     const response = await fetch("api/User/" + props.postInfo.id.toString())
@@ -43,7 +36,9 @@ export class PostItem extends Component {
                         <span className="date">{this.props.postInfo.date}</span>
                     </span>
                     <div dangerouslySetInnerHTML={this.convertToDom(this.props.postInfo.text)}/>
-                    <Link className="Continue" to="" onClick={this.savePostId}>Читать далее</Link>
+                    <div>
+                        <Link className="Continue" to="/PostPage">Читать далее</Link>
+                    </div>
                 </div>
             );
     }
